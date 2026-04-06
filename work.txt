@@ -1,0 +1,411 @@
+@NiallPG ➜ /workspaces/it612 (main) $ pwsh --version
+PowerShell 7.6.0
+@NiallPG ➜ /workspaces/it612 (main) $ pwsh
+PowerShell 7.6.0
+PS /workspaces/it612> Get-Process | Get-Member
+
+   TypeName: System.Diagnostics.Process
+
+Name                       MemberType     Definition
+----                       ----------     ----------
+Handles                    AliasProperty  Handles = Handlecount
+Name                       AliasProperty  Name = ProcessName
+NPM                        AliasProperty  NPM = NonpagedSystemMemorySize64
+PM                         AliasProperty  PM = PagedMemorySize64
+SI                         AliasProperty  SI = SessionId
+VM                         AliasProperty  VM = VirtualMemorySize64
+WS                         AliasProperty  WS = WorkingSet64
+Parent                     CodeProperty   System.Object Parent{get=GetParentProcess;}
+Disposed                   Event          System.EventHandler Disposed(System.Object, System.EventArgs)
+ErrorDataReceived          Event          System.Diagnostics.DataReceivedEventHandler ErrorDataReceived(System…
+Exited                     Event          System.EventHandler Exited(System.Object, System.EventArgs)
+OutputDataReceived         Event          System.Diagnostics.DataReceivedEventHandler OutputDataReceived(Syste…
+BeginErrorReadLine         Method         void BeginErrorReadLine()
+BeginOutputReadLine        Method         void BeginOutputReadLine()
+CancelErrorRead            Method         void CancelErrorRead()
+CancelOutputRead           Method         void CancelOutputRead()
+Close                      Method         void Close()
+CloseMainWindow            Method         bool CloseMainWindow()
+Dispose                    Method         void Dispose(), void IDisposable.Dispose()
+Equals                     Method         bool Equals(System.Object obj)
+GetHashCode                Method         int GetHashCode()
+GetLifetimeService         Method         System.Object GetLifetimeService()
+GetType                    Method         type GetType()
+InitializeLifetimeService  Method         System.Object InitializeLifetimeService()
+Kill                       Method         void Kill(), void Kill(bool entireProcessTree)
+Refresh                    Method         void Refresh()
+Start                      Method         bool Start()
+ToString                   Method         string ToString()
+WaitForExit                Method         void WaitForExit(), bool WaitForExit(int milliseconds), bool WaitFor…
+WaitForExitAsync           Method         System.Threading.Tasks.Task WaitForExitAsync(System.Threading.Cancel…
+WaitForInputIdle           Method         bool WaitForInputIdle(), bool WaitForInputIdle(int milliseconds), bo…
+__NounName                 NoteProperty   string __NounName=Process
+BasePriority               Property       int BasePriority {get;}
+Container                  Property       System.ComponentModel.IContainer Container {get;}
+EnableRaisingEvents        Property       bool EnableRaisingEvents {get;set;}
+ExitCode                   Property       int ExitCode {get;}
+ExitTime                   Property       datetime ExitTime {get;}
+Handle                     Property       System.IntPtr Handle {get;}
+HandleCount                Property       int HandleCount {get;}
+HasExited                  Property       bool HasExited {get;}
+Id                         Property       int Id {get;}
+MachineName                Property       string MachineName {get;}
+MainModule                 Property       System.Diagnostics.ProcessModule MainModule {get;}
+MainWindowHandle           Property       System.IntPtr MainWindowHandle {get;}
+MainWindowTitle            Property       string MainWindowTitle {get;}
+MaxWorkingSet              Property       System.IntPtr MaxWorkingSet {get;set;}
+MinWorkingSet              Property       System.IntPtr MinWorkingSet {get;set;}
+Modules                    Property       System.Diagnostics.ProcessModuleCollection Modules {get;}
+NonpagedSystemMemorySize   Property       int NonpagedSystemMemorySize {get;}
+NonpagedSystemMemorySize64 Property       long NonpagedSystemMemorySize64 {get;}
+PagedMemorySize            Property       int PagedMemorySize {get;}
+PagedMemorySize64          Property       long PagedMemorySize64 {get;}
+PagedSystemMemorySize      Property       int PagedSystemMemorySize {get;}
+PagedSystemMemorySize64    Property       long PagedSystemMemorySize64 {get;}
+PeakPagedMemorySize        Property       int PeakPagedMemorySize {get;}
+PeakPagedMemorySize64      Property       long PeakPagedMemorySize64 {get;}
+PeakVirtualMemorySize      Property       int PeakVirtualMemorySize {get;}
+PeakVirtualMemorySize64    Property       long PeakVirtualMemorySize64 {get;}
+PeakWorkingSet             Property       int PeakWorkingSet {get;}
+PeakWorkingSet64           Property       long PeakWorkingSet64 {get;}
+PriorityBoostEnabled       Property       bool PriorityBoostEnabled {get;set;}
+PriorityClass              Property       System.Diagnostics.ProcessPriorityClass PriorityClass {get;set;}
+PrivateMemorySize          Property       int PrivateMemorySize {get;}
+PrivateMemorySize64        Property       long PrivateMemorySize64 {get;}
+PrivilegedProcessorTime    Property       timespan PrivilegedProcessorTime {get;}
+ProcessName                Property       string ProcessName {get;}
+ProcessorAffinity          Property       System.IntPtr ProcessorAffinity {get;set;}
+Responding                 Property       bool Responding {get;}
+SafeHandle                 Property       Microsoft.Win32.SafeHandles.SafeProcessHandle SafeHandle {get;}
+SessionId                  Property       int SessionId {get;}
+Site                       Property       System.ComponentModel.ISite Site {get;set;}
+StandardError              Property       System.IO.StreamReader StandardError {get;}
+StandardInput              Property       System.IO.StreamWriter StandardInput {get;}
+StandardOutput             Property       System.IO.StreamReader StandardOutput {get;}
+StartInfo                  Property       System.Diagnostics.ProcessStartInfo StartInfo {get;set;}
+StartTime                  Property       datetime StartTime {get;}
+SynchronizingObject        Property       System.ComponentModel.ISynchronizeInvoke SynchronizingObject {get;se…
+Threads                    Property       System.Diagnostics.ProcessThreadCollection Threads {get;}
+TotalProcessorTime         Property       timespan TotalProcessorTime {get;}
+UserProcessorTime          Property       timespan UserProcessorTime {get;}
+VirtualMemorySize          Property       int VirtualMemorySize {get;}
+VirtualMemorySize64        Property       long VirtualMemorySize64 {get;}
+WorkingSet                 Property       int WorkingSet {get;}
+WorkingSet64               Property       long WorkingSet64 {get;}
+PSConfiguration            PropertySet    PSConfiguration {Name, Id, PriorityClass, FileVersion}
+PSResources                PropertySet    PSResources {Name, Id, Handlecount, WorkingSet, NonPagedMemorySize, …
+CommandLine                ScriptProperty System.Object CommandLine {get=…
+Company                    ScriptProperty System.Object Company {get=$this.Mainmodule.FileVersionInfo.CompanyN…
+CPU                        ScriptProperty System.Object CPU {get=$this.TotalProcessorTime.TotalSeconds;}
+Description                ScriptProperty System.Object Description {get=$this.Mainmodule.FileVersionInfo.File…
+FileVersion                ScriptProperty System.Object FileVersion {get=$this.Mainmodule.FileVersionInfo.File…
+Path                       ScriptProperty System.Object Path {get=$this.Mainmodule.FileName;}
+Product                    ScriptProperty System.Object Product {get=$this.Mainmodule.FileVersionInfo.ProductN…
+ProductVersion             ScriptProperty System.Object ProductVersion {get=$this.Mainmodule.FileVersionInfo.P…
+
+PS /workspaces/it612> exit
+@NiallPG ➜ /workspaces/it612 (main) $ ps aux | head -5
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+codespa+       1  0.0  0.0   1136   640 ?        Ss   13:30   0:00 /sbin/docker-init -- /bin/sh -c echo Container started trap "exit 0" 15 /usr/local/share/ssh-init.sh /usr/local/share/docker-init.sh exec "$@" while sleep 1 & wait $!; do :; done -
+codespa+       7  0.0  0.0   2800  1408 ?        S    13:30   0:00 /bin/sh -c echo Container started trap "exit 0" 15 /usr/local/share/ssh-init.sh /usr/local/share/docker-init.sh exec "$@" while sleep 1 & wait $!; do :; done -
+root         313  0.0  0.0  12016  2964 ?        Ss   13:30   0:00 sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+root         357  0.0  0.9 1969464 79316 ?       Sl   13:30   0:00 dockerd --dns 168.63.129.16
+@NiallPG ➜ /workspaces/it612 (main) $ pwsh
+PowerShell 7.6.0
+PS /workspaces/it612> Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 5 Name, @{N='MB';E={[math]::Round($_.WorkingSet64/1MB,1)}}
+
+Name     MB
+----     --
+node 343.70
+pwsh 122.20
+node 113.90
+node  75.00
+node  59.90
+
+PS /workspaces/it612> exit
+@NiallPG ➜ /workspaces/it612 (main) $ ps aux --sort=-%mem | head -6 | awk '{printf "%-20s %s MB\n", $11, $6}'
+COMMAND              RSS MB
+/vscode/bin/linux-x64/e7fb5e96c0730b9deb70b33781f98e2f35975036/node 352508 MB
+/vscode/bin/linux-x64/e7fb5e96c0730b9deb70b33781f98e2f35975036/node 116748 MB
+/vscode/bin/linux-x64/e7fb5e96c0730b9deb70b33781f98e2f35975036/node 76764 MB
+/vscode/bin/linux-x64/e7fb5e96c0730b9deb70b33781f98e2f35975036/node 61348 MB
+/vscode/bin/linux-x64/e7fb5e96c0730b9deb70b33781f98e2f35975036/node 58664 MB
+@NiallPG ➜ /workspaces/it612 (main) $ pwsh
+PowerShell 7.6.0
+PS /workspaces/it612> Get-ChildItem -Recurse -File | Group-Object Extension | Sort-Object Count -Descending | Select-Object Count, Name                   
+
+Count Name
+----- ----
+    3 .txt
+    2 .ipynb
+    2 .md
+    1 .csv
+    1 .js
+    1 .log
+    1 .logs
+
+PS /workspaces/it612> exit
+@NiallPG ➜ /workspaces/it612 (main) $ find . -type f | sed 's/.*\.//' | sort | uniq -c | sort -rn
+     14 sample
+      3 txt
+      2 md
+      2 ipynb
+      1 rev
+      1 pack
+      1 logs
+      1 log
+      1 js
+      1 idx
+      1 git/refs/remotes/origin/HEAD
+      1 git/refs/heads/main
+      1 git/packed-refs
+      1 git/objects/f2/e13fa54ea943ddc5589c86c2ddbe5118b10a77
+      1 git/objects/b9/cb2a0b433408e1b8161393ece5f3a8224ab59a
+      1 git/objects/b6/1f479803ce481b4c40c6da6d311ab68658137b
+      1 git/objects/98/1a5da2c95f8139975ff8a18804cbfc6848c65f
+      1 git/objects/8a/31c1efd6144103d021f763b6f8922bcbcef809
+      1 git/objects/81/ac825089ac51f8d7a477364c201db64061301f
+      1 git/objects/6f/02148105d796bc5dc3d6783108f1ebf65f192e
+      1 git/objects/47/22cc73c0badd945db44f0443b699202397e421
+      1 git/objects/46/6a318f824dd6d076042649f98d0c6036edbbd9
+      1 git/objects/43/389c4117a440b5acad264504e24c870b78cef9
+      1 git/logs/refs/remotes/origin/HEAD
+      1 git/logs/refs/heads/main
+      1 git/logs/HEAD
+      1 git/info/exclude
+      1 git/index
+      1 git/hooks/pre-push
+      1 git/hooks/post-merge
+      1 git/hooks/post-commit
+      1 git/hooks/post-checkout
+      1 git/description
+      1 git/config
+      1 git/HEAD
+      1 git/FETCH_HEAD
+      1 csv
+@NiallPG ➜ /workspaces/it612 (main) $ pwsh
+PowerShell 7.6.0
+PS /workspaces/it612> Get-ChildItem -Recurse -File |    Where-Object { $_.Length -gt 1KB -and $_.LastWriteTime -gt (Get-Date).AddHours(-24) } |    Sort-Object Length -Descending |    Select-Object Name, @{N='KB';E={[math]::Round($_.Length/1KB,1)}}, LastWriteTime
+
+Name                   KB LastWriteTime
+----                   -- -------------
+beta.txt            10.70 04/06/2026 14:33:15
+high_order_js.ipynb  4.90 04/06/2026 14:33:15
+Untitled0.ipynb      2.00 04/06/2026 14:33:15
+
+PS /workspaces/it612> exit
+@NiallPG ➜ /workspaces/it612 (main) $ find . -type f -mmin -1440 -size +1k -exec ls -lh {} \; | sort -k5 -h -r
+-rw-rw-rw- 1 codespace root 11K Apr  6 14:33 ./bash_scavenge/hunt/data/beta.txt
+-r--r--r-- 1 codespace root 7.2K Apr  6 14:33 ./.git/objects/pack/pack-aa36eb5df939097537b0db52c1e22926eeee280f.pack
+-rw-rw-rw- 1 codespace root 4.9K Apr  6 14:33 ./high_order_js.ipynb
+-rwxrwxrwx 1 codespace root 4.8K Apr  6 14:33 ./.git/hooks/pre-rebase.sample
+-rwxrwxrwx 1 codespace root 4.7K Apr  6 14:33 ./.git/hooks/fsmonitor-watchman.sample
+-rwxrwxrwx 1 codespace root 3.6K Apr  6 14:33 ./.git/hooks/update.sample
+-rwxrwxrwx 1 codespace root 2.8K Apr  6 14:33 ./.git/hooks/push-to-checkout.sample
+-rwxrwxrwx 1 codespace root 2.3K Apr  6 14:33 ./.git/hooks/sendemail-validate.sample
+-rw-rw-rw- 1 codespace root 2.0K Apr  6 14:33 ./Untitled0.ipynb
+-rwxrwxrwx 1 codespace root 1.7K Apr  6 14:33 ./.git/hooks/pre-commit.sample
+-r--r--r-- 1 codespace root 1.6K Apr  6 14:33 ./.git/objects/pack/pack-aa36eb5df939097537b0db52c1e22926eeee280f.idx
+-rwxrwxrwx 1 codespace root 1.5K Apr  6 14:33 ./.git/hooks/prepare-commit-msg.sample
+-rwxrwxrwx 1 codespace root 1.4K Apr  6 14:33 ./.git/hooks/pre-push.sample
+-rw-rw-rw- 1 codespace root 1.3K Apr  6 14:33 ./.git/index
+@NiallPG ➜ /workspaces/it612 (main) $ pwsh
+PowerShell 7.6.0
+PS /workspaces/it612> @'[  {"name": "Alice", "course": "CS101", "grade": 92, "semester": "Fall"},  {"name": "Bob", "course": "CS101", "grade": 78, "semester": "Fall"},  {"name": "Charlie", "course": "CS201", "grade": 88, "semester": "Fall"},  {"name": "Alice", "course": "CS201", "grade": 95, "semester": "Fall"},  {"name": "Diana", "course": "CS101", "grade": 65, "semester": "Spring"},  {"name": "Bob", "course": "CS201", "grade": 82, "semester": "Spring"},  {"name": "Eve", "course": "CS101", "grade": 91, "semester": "Spring"},  {"name": "Charlie", "course": "CS101", "grade": 73, "semester": "Spring"},  {"name": "Alice", "course": "CS301", "grade": 97, "semester": "Spring"},  {"name": "Diana", "course": "CS201", "grade": 71, "semester": "Spring"},  {"name": "Frank", "course": "CS101", "grade": 84, "semester": "Fall"},  {"name": "Eve", "course": "CS201", "grade": 89, "semester": "Fall"}]'@ | Set-Content students.json
+ParserError: 
+Line |
+   1 |  @'[  {"name": "Alice", "course": "CS101", "grade": 92, "semester": "F …
+     |    ~
+     | No characters are allowed after a here-string header but before the end of the line.
+PS /workspaces/it612> @'                                                                                                                                                                              
+>> [                                                                                                                                                                                                  
+>>   {"name": "Alice", "course": "CS101", "grade": 92, "semester": "Fall"},                                                                                                                           
+>>   {"name": "Bob", "course": "CS101", "grade": 78, "semester": "Fall"},                                                                                                                             
+>>   {"name": "Charlie", "course": "CS201", "grade": 88, "semester": "Fall"},                                                          
+>>   {"name": "Alice", "course": "CS201", "grade": 95, "semester": "Fall"},
+>>   {"name": "Diana", "course": "CS101", "grade": 65, "semester": "Spring"},
+>>   {"name": "Bob", "course": "CS201", "grade": 82, "semester": "Spring"},
+>>   {"name": "Eve", "course": "CS101", "grade": 91, "semester": "Spring"},
+>>   {"name": "Charlie", "course": "CS101", "grade": 73, "semester": "Spring"},
+>>   {"name": "Alice", "course": "CS301", "grade": 97, "semester": "Spring"},
+>>   {"name": "Diana", "course": "CS201", "grade": 71, "semester": "Spring"},
+>>   {"name": "Frank", "course": "CS101", "grade": 84, "semester": "Fall"},
+>>   {"name": "Eve", "course": "CS201", "grade": 89, "semester": "Fall"}
+>> ]
+>> '@ | Set-Content students.json
+PS /workspaces/it612> # Load the JSON — it becomes actual objects
+PS /workspaces/it612> $students = Get-Content students.json | ConvertFrom-Json
+PS /workspaces/it612> 
+PS /workspaces/it612> # Look at it
+PS /workspaces/it612> $students
+
+name    course grade semester
+----    ------ ----- --------
+Alice   CS101     92 Fall
+Bob     CS101     78 Fall
+Charlie CS201     88 Fall
+Alice   CS201     95 Fall
+Diana   CS101     65 Spring
+Bob     CS201     82 Spring
+Eve     CS101     91 Spring
+Charlie CS101     73 Spring
+Alice   CS301     97 Spring
+Diana   CS201     71 Spring
+Frank   CS101     84 Fall
+Eve     CS201     89 Fall
+
+PS /workspaces/it612> 
+PS /workspaces/it612> # Access properties with dot notation — just like any programming language
+PS /workspaces/it612> $students[0].name
+Alice
+PS /workspaces/it612> $students[0].grade
+92
+PS /workspaces/it612> # Who scored above 90?                                                    
+PS /workspaces/it612> $students | Where-Object { $_.grade -gt 90 }
+
+name  course grade semester
+----  ------ ----- --------
+Alice CS101     92 Fall
+Alice CS201     95 Fall
+Eve   CS101     91 Spring
+Alice CS301     97 Spring
+
+PS /workspaces/it612> 
+PS /workspaces/it612> # Just their names and grades
+PS /workspaces/it612> $students | Where-Object { $_.grade -gt 90 } | Select-Object name, grade
+
+name  grade
+----  -----
+Alice    92
+Alice    95
+Eve      91
+Alice    97
+
+PS /workspaces/it612> 
+PS /workspaces/it612> # CS101 students only
+PS /workspaces/it612> $students | Where-Object { $_.course -eq "CS101" }
+
+name    course grade semester
+----    ------ ----- --------
+Alice   CS101     92 Fall
+Bob     CS101     78 Fall
+Diana   CS101     65 Spring
+Eve     CS101     91 Spring
+Charlie CS101     73 Spring
+Frank   CS101     84 Fall
+
+PS /workspaces/it612> # Average grade per course
+PS /workspaces/it612> $students | Group-Object course | ForEach-Object {
+>>     [PSCustomObject]@{
+>>         Course = $_.Name
+>>         Average = [math]::Round(($_.Group | Measure-Object grade -Average).Average, 1)
+>>         Count   = $_.Count
+>>     }
+>> }
+
+Course Average Count
+------ ------- -----
+CS101    80.50     6
+CS201    85.00     5
+CS301    97.00     1
+
+PS /workspaces/it612> # Average grade per student across all their courses
+PS /workspaces/it612> $students | Group-Object name | ForEach-Object {
+>>     [PSCustomObject]@{
+>>         Student = $_.Name
+>>         GPA     = [math]::Round(($_.Group | Measure-Object grade -Average).Average, 1)
+>>         Courses = $_.Count
+>>     }
+>> } | Sort-Object GPA -Descending
+
+Student   GPA Courses
+-------   --- -------
+Alice   94.70       3
+Eve     90.00       2
+Frank   84.00       1
+Charlie 80.50       2
+Bob     80.00       2
+Diana   68.00       2
+
+PS /workspaces/it612> # Create a grade report CSV                         
+PS /workspaces/it612> $students |
+>>     Select-Object name, course, grade, @{N='letter';E={
+>>         if ($_.grade -ge 90) {'A'} elseif ($_.grade -ge 80) {'B'}
+>>         elseif ($_.grade -ge 70) {'C'} else {'F'}
+>>     }} |
+>>     Export-Csv grades-report.csv -NoTypeInformation
+PS /workspaces/it612> 
+PS /workspaces/it612> # Read it back
+PS /workspaces/it612> Import-Csv grades-report.csv
+
+name    course grade letter
+----    ------ ----- ------
+Alice   CS101  92    A
+Bob     CS101  78    C
+Charlie CS201  88    B
+Alice   CS201  95    A
+Diana   CS101  65    F
+Bob     CS201  82    B
+Eve     CS101  91    A
+Charlie CS101  73    C
+Alice   CS301  97    A
+Diana   CS201  71    C
+Frank   CS101  84    B
+Eve     CS201  89    B
+
+PS /workspaces/it612> # Fetch a public API — the response becomes an object
+PS /workspaces/it612> $response = Invoke-RestMethod "https://api.github.com/repos/PowerShell/PowerShell"
+PS /workspaces/it612> 
+PS /workspaces/it612> $response.stargazers_count
+52285
+PS /workspaces/it612> $response.language
+C#
+PS /workspaces/it612> $response.description
+PowerShell for every system!
+PS /workspaces/it612> 
+PS /workspaces/it612> # When was it last updated?
+PS /workspaces/it612> $response.updated_at 
+
+Monday, 06 April 2026 14:15:20
+
+PS /workspaces/it612> # Environment variables as a navigable drive
+PS /workspaces/it612> Get-ChildItem Env: | Where-Object { $_.Name -like "*PATH*" }
+
+Name                           Value
+----                           -----
+GEM_PATH                       /usr/local/rvm/gems/ruby-3.4.7:/usr/local/rvm/gems/ruby-3.4.7@global
+GOPATH                         /go
+JUPYTERLAB_PATH                /home/codespace/.local/bin
+PATH                           /opt/microsoft/powershell/7:/usr/local/rvm/gems/ruby-3.4.7/bin:/usr/local/rvm/gems/ruby-3.4.7@global/bin:/usr/local/rvm/rubies/ruby…
+PHP_PATH                       /usr/local/php/current
+PSModulePath                   /home/codespace/.local/share/powershell/Modules:/usr/local/share/powershell/Modules:/opt/microsoft/powershell/7/Modules
+PYTHON_PATH                    /usr/local/python/current
+rvm_bin_path                   /usr/local/rvm/bin
+rvm_path                       /usr/local/rvm
+RVM_PATH                       /usr/local/rvm
+
+PS /workspaces/it612> 
+PS /workspaces/it612> # Cross-platform system info
+PS /workspaces/it612> [System.Environment]::OSVersion
+
+Platform ServicePack Version    VersionString
+-------- ----------- -------    -------------
+    Unix             6.8.0.1044 Unix 6.8.0.1044
+
+PS /workspaces/it612> [System.Environment]::ProcessorCount
+2
+PS /workspaces/it612> $PSVersionTable
+
+Name                           Value
+----                           -----
+PSVersion                      7.6.0
+PSEdition                      Core
+GitCommitId                    7.6.0
+OS                             Ubuntu 24.04.3 LTS
+Platform                       Unix
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.4
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+
+PS /workspaces/it612> 
